@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class=" col-lg-4 col-sm-4">
+           <img [src]="food.imageUrl" [alt]="food.name" class="img-fluid"/> 
+        </div>
+        <div class="col-lg-4 col-lg-2">
+           <div class="header mb-3">
+            <span class="name ">
+                {{food.name}} 
+            </span>
+            <span class="favorite {{food.favorite?'':'not'}}">
+                ❤ 
+            </span>
+           </div>
+
+           <div class="rating">
+            stars: {{food.stars}}
+           </div>
+            <div class="origins my-2">
+                <span *ngFor="let origin of food.origins">
+                    {{origin}}
+                </span>
+            </div>
+            <div class="tags my-2">
+                <app-tag [foodPageTags]="food.tags" ></app-tag>
+            </div>
+            <div class="cookTime my-2">
+                <span>
+                    Time to cook about <strong>{{food.cookTime}} </strong > minutes
+                </span>
+            </div>
+            <div class="price my-3">
+                <span>
+                  <span class="h5">Price</span> {{food.price | currency}}
+                </span>
+            </div>
+            <button class="btn btn-danger ">
+                Add to card
+            </button>
+        </div>
+    </div>
+</div>

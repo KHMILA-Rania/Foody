@@ -1,0 +1,21 @@
+
+.container{
+    margin-top: 2rem;
+}
+img{
+    height: 32vh;
+    border-radius: 2rem;
+}
+
+.name{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.h5{
+    color: rgb(156, 154, 154);
+
+}
+.price{
+    color: green;
+    font-weight: 500;
+}

@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-const HomeComponentroutes: Routes = [
+import { FoodPageComponent } from './components/food-page/food-page.component';
+const routes: Routes = [
   {path:'',
    component: HomeComponent},
    {
     path:'search/:searchTerm',
+    component: HomeComponent
+   },
+   {
+    path:'tag/:tag1',//localhost:4200/tag/fastfood
     component:HomeComponent
-   }
+   },
+   {path : 'food/:id',
+  component:FoodPageComponent}
 ];
 
 @NgModule({
