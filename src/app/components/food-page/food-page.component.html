@@ -1,10 +1,16 @@
-<div class="container">
+<app-not-found [visible]="!food "
+    notFoundMessage="product not found" rsetLinkText="Go to home page"
+    >
+</app-not-found>
+
+<div  *ngIf="food" class="container">
     <div class="row">
-        <div class="col-2"></div>
-        <div class=" col-lg-4 col-sm-4">
+        <div class="col-lg-1 "></div>
+        <div class=" col-lg-5 col-sm-7 im">
            <img [src]="food.imageUrl" [alt]="food.name" class="img-fluid"/> 
         </div>
-        <div class="col-lg-4 col-lg-2">
+      
+        <div class="col-lg-4 col-sm-7 details">
            <div class="header mb-3">
             <span class="name ">
                 {{food.name}} 
@@ -35,7 +41,7 @@
                   <span class="h5">Price</span> {{food.price | currency}}
                 </span>
             </div>
-            <button class="btn btn-danger ">
+            <button class="btn btn-danger " (click)="addToCart()">
                 Add to card
             </button>
         </div>

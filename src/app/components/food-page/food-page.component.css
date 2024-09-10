@@ -1,10 +1,21 @@
 
 .container{
     margin-top: 2rem;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 img{
-    height: 32vh;
+    height: 39vh;
     border-radius: 2rem;
+    flex: 1 0;
+    object-fit: cover;
+    
+}
+.im{
+    min-width: 25rem;
+    margin-right: .5rem;
 }
 
 .name{
@@ -18,4 +29,28 @@ img{
 .price{
     color: green;
     font-weight: 500;
+}
+button{
+    width: 28rem;
+    border-radius: 5rem;
+}
+
+.tags{
+    margin: 0;
+    padding: 0;
+}
+.details{
+    margin-top: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    width: 100%;
+    color: black;
+}
+.name{
+    margin-right: 1.5rem;
+}
+.details .header{
+    display: flex;
+    justify-content: space-between;
 }

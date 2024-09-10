@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { FoodPageComponent } from './components/food-page/food-page.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 const routes: Routes = [
   {path:'',
    component: HomeComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
     component:HomeComponent
    },
    {path : 'food/:id',
-  component:FoodPageComponent}
+  component:FoodPageComponent},
+  {path : 'cart-page', component:CartPageComponent},
 ];
 
 @NgModule({
